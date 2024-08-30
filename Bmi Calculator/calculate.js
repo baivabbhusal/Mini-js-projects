@@ -23,7 +23,8 @@ form.addEventListener("submit",function(e)
         }
     else{
         const bmi=(weight/((height*height)/10000)).toFixed(2);
-        result.style.color="green";
+        result.style.color="white",
+        result.style.fontWeight="bold";
         if(bmi<18.6){
             result.innerHTML=`<span>Under-Weight:${bmi}</span>`;
         }
