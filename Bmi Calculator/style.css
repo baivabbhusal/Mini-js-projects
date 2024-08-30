@@ -3,22 +3,22 @@
     padding: 0;
 }
 body{
-    background-color: rgb(220, 165, 165);
-    color:rgb(225, 222, 222)
+    background-color: rgb(16, 14, 14);
+    color:#FFFACA;
 }
 h1{
     text-align: center;
-    color:antiquewhite;
+    color:#003554;
     padding:2vw;
     box-sizing: border-box;
 }
 nav{
     height:10vh;
-    background-color: rgb(9, 10, 10);
-    color:rgb(15, 9, 3);
+    background-color:#679289;
 }
 
 .container{
+    height:75vh;
     margin:50px;
     border:2px solid white;
     border-radius: 10px;
@@ -50,4 +50,5 @@ button{
 
 .weight-guide{
     margin: 400px;
+ 
 }
