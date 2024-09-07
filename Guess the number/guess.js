@@ -41,56 +41,55 @@ if (guess>100 || guess<0)
   alert("Please enter a number in range 1 to 100.");
 }
 else{
-     // prevGuess.push(guess);
-      //if(numGuess===11)
-     //{
-          //displayGuess(guess);
+      prevGuess.push(guess);
+      if(numGuess===11)
+     {
+          displayGuess(guess);
           displayMessage(`Game over.Random Number is ${randomNumber}`);
-       //endGame();
-     // }
-     //  else{
-     //      displayGuess(guess);
-     //      checkGuess(guess);
-     //  } 
-    // }
+      endGame();
+      }
+  else{
+     displayGuess(guess);
+       checkGuess(guess);
+     } 
+    }
 }
-}
-
-//   function checkGuess(guess)
-//    {
-
-//       if(guess===randomNumber){
-//           displayMessage("Congratulation!,You guessed it right.");
-//          endGame();
-//       }
-//       else if(guess<randomNumber){
-//           displayMessage("Guess is too low.")
-//       }
-//       else if(guess>randomNumber){
-//           displayMessage("Guess is too high.")
-
-//       }
-//   }
-
-//  function displayGuess(guess)
-//   {
-//   userInput.value="";
-//   guessSlot.innerHTML+=`${guess }`;
-//   numGuess++;
-//   remainingGuess.innerHTML=`${11-numGuess}`;
 
 
-//   }
+   function checkGuess(guess)
+    {
 
-  function displayMessage(Message)
+       if(guess===randomNumber){
+           displayMessage("Congratulation!,You guessed it right.");
+          endGame();
+       }
+       else if(guess<randomNumber){
+           displayMessage("Guess is too low.")
+       }
+      else if(guess>randomNumber){
+           displayMessage("Guess is too high.")
+
+       }
+   }
+
+  function displayGuess(guess)
   {
-  lowHigh.innerHTML=<h2>`${Message}`</h2>;
+  userInput.value="";
+  guessSlot.innerHTML+=`${guess} `;
+   numGuess++;
+  remainingGuess.innerHTML=`${11-numGuess}`;
+
   }
 
-//   function newGame(){
-// //
-//   }
+function displayMessage(Message)
+{
+lowHigh.innerHTML=`<h2>${Message}</h2>`;
+}
 
-//  function endGame(){
-//      //
-//   }
+   function newGame(){
+//
+   }
+
+  function endGame(){
+     //
+  }
