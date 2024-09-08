@@ -42,6 +42,7 @@ if (guess>100 || guess<0)
 }
 else{
       prevGuess.push(guess);
+      console.log(prevGuess);
       if(numGuess===11)
      {
           displayGuess(guess);
@@ -86,10 +87,30 @@ function displayMessage(Message)
 lowHigh.innerHTML=`<h2>${Message}</h2>`;
 }
 
-   function newGame(){
-//
-   }
 
   function endGame(){
-     //
+     userInput='';
+     userInput.setAttribute("disabled",'');
+     p.classList.add("button");
+     p.innerHTML=`<h2 id="newGame">Start New Game</h2>`;
+     startOver.append(p);
+     playGame=false;
+     newGame();
+  }
+
+  function newGame(){
+   const newGameButton=document.querySelector(".newGame");
+   newGameButton.addEventListener('click',function(e){
+      randomNumber=parseInt(Math.random()*100+1);
+      guessSlot.innerHTML="";
+      remainingGuess.innerHTML=`${11-numGuess}`;
+
+        prevGuess=[];
+        numGuess=1;
+
+
+        playGame=true;
+
+   })
+
   }
